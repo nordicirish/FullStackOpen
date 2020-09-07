@@ -12,46 +12,43 @@ const App = () => {
   
   // Renders a single part using props
   const Part = (props) =>  {
-  console.log(props)
-   return (
-    <>
-      <p>{props.name} {props.exercise} </p>
-    </>
-   )
+    console.log(props)
+      return (
+        <>
+          <p>{props.name} {props.exercise} </p>
+        </>
+      )
  }
 
   const Header = (props) =>  {
     console.log(props)
-     return (
+      return (
        <>
        <h1>{props.course}</h1>
        </>
      )
    }
+
    // Renders content using data passed as props 
   const Content = (props) => {
   console.log(props)
     return (
-    <div>
-      <Part name = {part1} exercise = {exercises1} /> 
-      <Part name = {part2} exercise = {exercises2} />
-      <Part name = {part3} exercise = {exercises3} />
-    </div>
-  )
+      <div>
+        <Part name = {part1} exercise = {exercises1} /> 
+        <Part name = {part2} exercise = {exercises2} />
+        <Part name = {part3} exercise = {exercises3} />
+      </div>
+    )
   }
   
   const Total = (props) => {
     console.log(props)
-    return (
-     
-      <p>Number of exercises {props.exercises1 + props.exercises2 + props.exercises3}</p>
-      
-    )
+      return (
+        <p>Number of exercises {props.exercises1 + props.exercises2 + props.exercises3}</p>
+      )
   }
 
   return (
-
-
     <>
       <Header course={course} />
       <Content part1 = {part1} part2 = {part2} part3 ={part3} exercises1={exercises1} exercises2={exercises2} exercises3={exercises3} /> 
@@ -59,6 +56,5 @@ const App = () => {
     </>
   )
 }
-
 
 ReactDOM.render(<App />, document.getElementById('root'))
